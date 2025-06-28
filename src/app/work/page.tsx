@@ -1,4 +1,3 @@
-import { PostList } from '@/components';
 import { PostQuery, PostQuerySkeleton } from '@/components/PostQuery/PostQuery';
 import { Suspense } from 'react';
 
@@ -19,8 +18,3 @@ const Work = async () => {
 	);
 };
 export default Work;
-
-interface IWorkCollectionDoc {
-	_id: number;
-	title: string;
-}

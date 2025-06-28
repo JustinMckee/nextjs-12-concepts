@@ -1,7 +1,7 @@
 interface IProps {
 	posts: {
 		_id: number;
-		title: string;
+		[key: string]: unknown;
 	}[];
 }
 const PostList: React.FC<IProps> = ({ posts }) => {
@@ -11,7 +11,7 @@ const PostList: React.FC<IProps> = ({ posts }) => {
 				<li
 					key={post._id}
 					className='post-item mb-4'>
-					{post.title}
+					{post.title as string}
 				</li>
 			))}
 		</ul>
